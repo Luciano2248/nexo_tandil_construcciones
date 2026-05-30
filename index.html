@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexo Tandil Construcciones — Tu hogar, nuestra obra</title>
+  <meta name="description" content="Nexo Tandil Construcciones. Servicios integrales de construcción, refacciones y mantenimiento en Tandil y la zona. Plomería, electricidad, arquitectura, pintura y más.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SVG SPRITE (icons reutilizables) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- wrench -->
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+  </symbol>
+  <!-- flame -->
+  <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C8 7 6 10 6 14a6 6 0 0 0 12 0c0-4-2-7-6-12z"/>
+    <path d="M12 12c-1.5 2-2 3.5-2 5a2 2 0 0 0 4 0c0-1.5-.5-3-2-5z"/>
+  </symbol>
+  <!-- zap -->
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+  <!-- building -->
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+    <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+    <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+    <line x1="10" y1="6" x2="14" y2="6"/><line x1="10" y1="10" x2="14" y2="10"/>
+    <line x1="10" y1="14" x2="14" y2="14"/><line x1="10" y1="18" x2="14" y2="18"/>
+  </symbol>
+  <!-- compass -->
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+  </symbol>
+  <!-- paintbrush -->
+  <symbol id="i-paintbrush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/>
+    <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.5 1 2 6.64.17 8.72-3.74a3.02 3.02 0 0 0-3.72-1.78z"/>
+  </symbol>
+  <!-- scissors (carpintería) -->
+  <symbol id="i-saw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+    <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+    <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+    <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+  </symbol>
+  <!-- layers (microalisados) -->
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+    <polyline points="2 17 12 22 22 17"/>
+    <polyline points="2 12 12 17 22 12"/>
+  </symbol>
+  <!-- bars / gate (herrería) -->
+  <symbol id="i-gate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="3" width="20" height="18" rx="1"/>
+    <line x1="7" y1="3" x2="7" y2="21"/>
+    <line x1="12" y1="3" x2="12" y2="21"/>
+    <line x1="17" y1="3" x2="17" y2="21"/>
+    <line x1="2" y1="10" x2="22" y2="10"/>
+    <line x1="2" y1="15" x2="22" y2="15"/>
+  </symbol>
+  <!-- droplet (impermeabilización) -->
+  <symbol id="i-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C8 7.5 5 11 5 15a7 7 0 0 0 14 0c0-4-3-7.5-7-13z"/>
+  </symbol>
+  <!-- home (refacciones) -->
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    <polyline points="9 22 9 12 15 12 15 22"/>
+  </symbol>
+  <!-- grid (cerámicos) -->
+  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="7" height="7" x="3" y="3" rx="1"/>
+    <rect width="7" height="7" x="14" y="3" rx="1"/>
+    <rect width="7" height="7" x="14" y="14" rx="1"/>
+    <rect width="7" height="7" x="3" y="14" rx="1"/>
+  </symbol>
+  <!-- map-pin -->
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <!-- phone -->
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.49a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+  <!-- mail -->
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="20" height="16" x="2" y="4" rx="2"/>
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+  </symbol>
+  <!-- clock -->
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <polyline points="12 6 12 12 16 14"/>
+  </symbol>
+  <!-- check-circle -->
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </symbol>
+  <!-- file-text -->
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <polyline points="14 2 14 8 20 8"/>
+    <line x1="16" y1="13" x2="8" y2="13"/>
+    <line x1="16" y1="17" x2="8" y2="17"/>
+    <polyline points="10 9 9 9 8 9"/>
+  </symbol>
+  <!-- shield -->
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </symbol>
+  <!-- document check (garantía por escrito) -->
+  <symbol id="i-doc-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+    <polyline points="14 2 14 8 20 8"/>
+    <polyline points="9 14 11 16 15 12"/>
+  </symbol>
+  <!-- refresh -->
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 4v6h-6"/>
+    <path d="M1 20v-6h6"/>
+    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+  </symbol>
+  <!-- headphones (atención) -->
+  <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+  </symbol>
+</svg>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="Nexo Tandil Construcciones" />
+    <div class="nav-logo-text">
+      <span class="brand">Nexo</span>
+      <span class="sub">Tandil Construcciones</span>
+    </div>
+  </a>
+  <div class="nav-menu" id="navMenu">
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#garantia">Garantía</a>
+    <a href="#auspiciantes">Auspiciantes</a>
+    <a href="#contacto">Contacto</a>
+    <a href="postulaciones.html" class="nav-cta">Trabajá con nosotros</a>
+  </div>
+  <div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
+    <span id="t1"></span><span id="t2"></span><span id="t3"></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Tandil y la zona serrana</div>
+    <h1>Construimos tu <span class="accent">visión,</span><br/>cuidamos tu hogar.</h1>
+    <p class="hero-desc">Servicios integrales de construcción y mantenimiento. Un equipo de profesionales certificados disponibles para cada proyecto, grande o pequeño.</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
+      <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">10<span>+</span></div>
+        <div class="stat-label">Especialidades</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3<span>m</span></div>
+        <div class="stat-label">Meses de garantía</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Comprometidos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24<span>hs</span></div>
+        <div class="stat-label">Respuesta urgencias</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Desplazá
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services" id="servicios">
+  <div class="services-inner">
+    <div class="services-header">
+      <span class="section-label">Lo que hacemos</span>
+      <h2 class="section-title">Servicios integrales<br/>para cada necesidad</h2>
+      <p class="section-sub">Contamos con profesionales matriculados y con experiencia en cada rubro. Un solo punto de contacto para todos tus proyectos.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-wrench"/></svg></span>
+        <h3 class="service-name">Plomería</h3>
+        <p class="service-desc">Instalaciones, reparaciones de cañerías, desagotes, termotanques y más. Respuesta rápida ante urgencias.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-flame"/></svg></span>
+        <h3 class="service-name">Gasista Matriculado</h3>
+        <p class="service-desc">Instalación y reparación de redes de gas, calderas, calefones, estufas y habilitaciones municipales.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-zap"/></svg></span>
+        <h3 class="service-name">Electricidad</h3>
+        <p class="service-desc">Instalaciones eléctricas domiciliarias e industriales, tableros, puesta a tierra y certificaciones.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-building"/></svg></span>
+        <h3 class="service-name">Construcción</h3>
+        <p class="service-desc">Obra nueva, ampliaciones, refacciones estructurales y trabajos de albañilería en general.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-compass"/></svg></span>
+        <h3 class="service-name">Arquitectura</h3>
+        <p class="service-desc">Diseño de planos, dirección de obra, proyectos de arquitectura residencial y comercial.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-paintbrush"/></svg></span>
+        <h3 class="service-name">Pintura</h3>
+        <p class="service-desc">Pintura interior y exterior, látex, esmalte, barnices y tratamientos especiales para superficies.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-saw"/></svg></span>
+        <h3 class="service-name">Carpintería</h3>
+        <p class="service-desc">Muebles a medida, puertas, ventanas, decks, revestimientos y trabajos en madera en general.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-layers"/></svg></span>
+        <h3 class="service-name">Microalisados</h3>
+        <p class="service-desc">Terminaciones decorativas de alto impacto: microcemento, veneciano, texturado y revestimientos especiales.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-gate"/></svg></span>
+        <h3 class="service-name">Herrería</h3>
+        <p class="service-desc">Rejas, portones, escaleras, barandas, estructuras metálicas y trabajos de soldadura.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-droplet"/></svg></span>
+        <h3 class="service-name">Impermeabilización</h3>
+        <p class="service-desc">Tratamientos para techos, terrazas, balcones y muros. Prevención y solución de filtraciones.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-home"/></svg></span>
+        <h3 class="service-name">Refacciones</h3>
+        <p class="service-desc">Todo tipo de arreglos y mantenimiento del hogar, desde pequeñas reparaciones hasta renovaciones completas.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon"><svg><use href="#i-grid"/></svg></span>
+        <h3 class="service-name">Cerámicos y Revestimientos</h3>
+        <p class="service-desc">Colocación de cerámicos, porcellanato, mosaicos y revestimientos para pisos y paredes.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="about" id="nosotros">
+  <div class="about-inner">
+    <div class="about-text">
+      <span class="section-label">Por qué elegirnos</span>
+      <h2 class="section-title">El nexo entre vos<br/>y tu proyecto ideal</h2>
+      <p class="section-sub">Somos una empresa tandilense comprometida con la calidad, la transparencia y el cumplimiento. Gestionamos cada etapa para que vos no tengas que preocuparte por nada.</p>
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="feature-icon"><svg><use href="#i-check"/></svg></div>
+          <div class="feature-text">
+            <h4>Profesionales verificados</h4>
+            <p>Todos nuestros oficiales están matriculados y cuentan con experiencia comprobable en su especialidad.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon"><svg><use href="#i-file"/></svg></div>
+          <div class="feature-text">
+            <h4>Presupuesto sin costo</h4>
+            <p>Evaluamos tu proyecto y te entregamos un presupuesto detallado, sin compromiso y sin costo.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon"><svg><use href="#i-shield"/></svg></div>
+          <div class="feature-text">
+            <h4>Garantía en todos los trabajos</h4>
+            <p>Respaldamos cada trabajo con una garantía mínima de 3 meses. Tu tranquilidad es nuestra prioridad.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon"><svg><use href="#i-pin"/></svg></div>
+          <div class="feature-text">
+            <h4>Equipo local, compromiso real</h4>
+            <p>Somos de Tandil. Conocemos la zona, los materiales disponibles y las necesidades de nuestra comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <span class="section-label">Zonas de cobertura</span>
+      <div class="coverage-item">
+        <div class="coverage-dot"></div>
+        <div class="coverage-info">
+          <h4>Tandil ciudad</h4>
+          <p>Cobertura completa en todos los barrios</p>
+        </div>
+      </div>
+      <div class="coverage-divider"></div>
+      <div class="coverage-item">
+        <div class="coverage-dot"></div>
+        <div class="coverage-info">
+          <h4>Zona serrana</h4>
+          <p>Barrios privados, countries y chacras</p>
+        </div>
+      </div>
+      <div class="coverage-divider"></div>
+      <div class="coverage-item">
+        <div class="coverage-dot"></div>
+        <div class="coverage-info">
+          <h4>Partido de Tandil</h4>
+          <p>María Ignacia, Iraola, Gardey y alrededores</p>
+        </div>
+      </div>
+      <div class="coverage-divider"></div>
+      <div class="coverage-item">
+        <div class="coverage-dot"></div>
+        <div class="coverage-info">
+          <h4>Zona de influencia</h4>
+          <p>Azul, Balcarce, Rauch y localidades cercanas</p>
+        </div>
+      </div>
+      <div class="coverage-divider"></div>
+      <div class="coverage-item">
+        <div class="coverage-dot"></div>
+        <div class="coverage-info">
+          <h4>Proyectos especiales</h4>
+          <p>Consultar disponibilidad para otras zonas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA -->
+<section class="warranty" id="garantia">
+  <div class="warranty-inner">
+    <div class="warranty-content">
+      <span class="section-label">Nuestro compromiso</span>
+      <h2 class="section-title">Garantía que te da<br/>tranquilidad real</h2>
+      <p class="section-sub">Todos los trabajos realizados por Nexo Tandil Construcciones cuentan con una garantía mínima de <strong style="color:var(--gold-light)">3 meses</strong>. Si algo no funciona como debería, volvemos sin costo adicional.</p>
+      <div class="warranty-badges">
+        <div class="warranty-badge">
+          <span class="badge-icon"><svg><use href="#i-doc-check"/></svg></span>
+          Garantía por escrito
+        </div>
+        <div class="warranty-badge">
+          <span class="badge-icon"><svg><use href="#i-refresh"/></svg></span>
+          Revisión sin costo
+        </div>
+        <div class="warranty-badge">
+          <span class="badge-icon"><svg><use href="#i-headset"/></svg></span>
+          Atención post-trabajo
+        </div>
+      </div>
+    </div>
+    <div class="warranty-card">
+      <div class="warranty-num">3</div>
+      <div class="warranty-label">Meses de garantía incluidos</div>
+      <div class="warranty-divider"></div>
+      <div class="warranty-extend">
+        <p>¿Querés mayor cobertura? Extendé tu garantía con un único pago.</p>
+        <div class="warranty-price"><span>$</span>9.500</div>
+        <p style="margin-top:8px; font-size:0.8rem;">Extensión de garantía adicional</p>
+        <a href="#contacto" class="btn">Contratar extensión</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUSPICIANTES -->
+<section class="sponsors" id="auspiciantes">
+  <div class="sponsors-inner">
+    <div class="sponsors-header">
+      <span class="section-label">Auspiciantes</span>
+      <h2 class="section-title">Materiales de calidad,<br/>proveedores de confianza</h2>
+      <p class="section-sub">Trabajamos con las mejores marcas y comercios de la región para garantizar materiales de primera calidad en cada obra.</p>
+    </div>
+    <div class="sponsors-grid">
+      <div class="sponsor-card">
+        <div class="sponsor-logo" style="color:var(--olive)"><svg width="36" height="36"><use href="#i-building"/></svg></div>
+        <div class="sponsor-name">Corralón del Centro</div>
+        <div class="sponsor-cat">Materiales de construcción</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo" style="color:var(--olive)"><svg width="36" height="36"><use href="#i-zap"/></svg></div>
+        <div class="sponsor-name">Electro Tandil</div>
+        <div class="sponsor-cat">Materiales eléctricos</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo" style="color:var(--olive)"><svg width="36" height="36"><use href="#i-home"/></svg></div>
+        <div class="sponsor-name">Aberturas Tandil</div>
+        <div class="sponsor-cat">Puertas y ventanas</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo" style="color:var(--olive)"><svg width="36" height="36"><use href="#i-paintbrush"/></svg></div>
+        <div class="sponsor-name">Pinturería El Serrano</div>
+        <div class="sponsor-cat">Pinturas y revestimientos</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo" style="color:var(--olive)"><svg width="36" height="36"><use href="#i-layers"/></svg></div>
+        <div class="sponsor-name">Maderería Sur</div>
+        <div class="sponsor-cat">Maderas y tableros</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo" style="color:var(--olive)"><svg width="36" height="36"><use href="#i-droplet"/></svg></div>
+        <div class="sponsor-name">Sanitarios & Griferías</div>
+        <div class="sponsor-cat">Sanitarios y plomería</div>
+      </div>
+    </div>
+    <div class="sponsor-join">
+      <h3>¿Tu empresa quiere auspiciar?</h3>
+      <p>Sumá tu marca como auspiciante oficial de Nexo Tandil Construcciones y alcanzá a cientos de clientes en la zona. Beneficios exclusivos para proveedores asociados.</p>
+      <a href="#contacto" class="btn btn-primary">Quiero auspiciar</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <span class="section-label">Contacto</span>
+      <h2 class="section-title">Hablemos de<br/>tu proyecto</h2>
+      <p class="section-sub">Contanos qué necesitás y te respondemos a la brevedad con un presupuesto sin compromiso.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon"><svg><use href="#i-pin"/></svg></div>
+          <div class="contact-text">
+            <h4>Ubicación</h4>
+            <p>Tandil, Buenos Aires, Argentina</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg><use href="#i-phone"/></svg></div>
+          <div class="contact-text">
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/5492494497723" target="_blank">+54 9 2494 497723</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg><use href="#i-mail"/></svg></div>
+          <div class="contact-text">
+            <h4>Email</h4>
+            <a href="mailto:contacto@nexotandil.com">contacto@nexotandil.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg><use href="#i-clock"/></svg></div>
+          <div class="contact-text">
+            <h4>Horario de atención</h4>
+            <p>Lun–Vie: 8:00 a 18:00 hs<br/>Sáb: 8:00 a 13:00 hs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Envianos tu consulta</h3>
+      <form class="form-grid" onsubmit="handleContactSubmit(event)">
+        <div class="form-group">
+          <label for="c-name">Nombre</label>
+          <input type="text" id="c-name" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="c-phone">Teléfono</label>
+          <input type="tel" id="c-phone" placeholder="Tu teléfono" />
+        </div>
+        <div class="form-group">
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" placeholder="tu@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="c-service">Servicio</label>
+          <select id="c-service">
+            <option value="">Seleccioná un servicio</option>
+            <option>Plomería</option><option>Gasista</option><option>Electricidad</option>
+            <option>Construcción</option><option>Arquitectura</option><option>Pintura</option>
+            <option>Carpintería</option><option>Microalisados</option><option>Herrería</option>
+            <option>Impermeabilización</option><option>Cerámicos</option><option>Refacciones</option>
+            <option>Extensión de garantía</option><option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="c-msg">Describí tu proyecto</label>
+          <textarea id="c-msg" placeholder="Contanos qué necesitás, la dirección si querés que vayamos a ver..." required></textarea>
+        </div>
+        <div class="form-submit full">
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Enviar consulta</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.jpg" alt="Nexo Tandil" />
+        <div>
+          <div class="brand">Nexo</div>
+          <div class="sub">Tandil Construcciones</div>
+        </div>
+      </div>
+      <p class="footer-desc">Servicios integrales de construcción y mantenimiento para el hogar y la empresa en Tandil y la zona serrana.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#servicios">Plomería</a></li>
+        <li><a href="#servicios">Electricidad</a></li>
+        <li><a href="#servicios">Construcción</a></li>
+        <li><a href="#servicios">Arquitectura</a></li>
+        <li><a href="#servicios">Pintura</a></li>
+        <li><a href="#servicios">Microalisados</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#garantia">Garantía</a></li>
+        <li><a href="#auspiciantes">Auspiciantes</a></li>
+        <li><a href="postulaciones.html">Trabajá con nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/5492494497723" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contacto@nexotandil.com">Email</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nexo Tandil Construcciones. Todos los derechos reservados.</p>
+    <p>Hecho con orgullo en Tandil, Buenos Aires</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<a href="https://wa.me/5492494497723" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
+  <span class="wa-tooltip">Escribinos</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  let menuOpen = false;
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+    document.getElementById('navMenu').classList.toggle('open', menuOpen);
+    const t1 = document.getElementById('t1'), t2 = document.getElementById('t2'), t3 = document.getElementById('t3');
+    if (menuOpen) { t1.style.transform='rotate(45deg) translate(5px,5px)'; t2.style.opacity='0'; t3.style.transform='rotate(-45deg) translate(5px,-5px)'; }
+    else { t1.style.transform=''; t2.style.opacity=''; t3.style.transform=''; }
+  }
+  document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => { if (menuOpen) toggleMenu(); }));
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 4000);
+  }
+
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    showToast('Consulta enviada. Te contactamos pronto.');
+    e.target.reset();
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.style.opacity='1'; entry.target.style.transform='translateY(0)'; }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.service-card, .sponsor-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.45s ease, transform 0.45s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>

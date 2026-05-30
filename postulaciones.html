@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postulaciones — Nexo Tandil Construcciones</title>
+  <meta name="description" content="Unite al equipo de Nexo Tandil Construcciones. Buscamos plomeros, electricistas, gasistas, pintores, carpinteros y más.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SVG SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+  </symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C8 7 6 10 6 14a6 6 0 0 0 12 0c0-4-2-7-6-12z"/>
+    <path d="M12 12c-1.5 2-2 3.5-2 5a2 2 0 0 0 4 0c0-1.5-.5-3-2-5z"/>
+  </symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+    <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+    <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+    <line x1="10" y1="6" x2="14" y2="6"/><line x1="10" y1="10" x2="14" y2="10"/>
+    <line x1="10" y1="14" x2="14" y2="14"/><line x1="10" y1="18" x2="14" y2="18"/>
+  </symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+  </symbol>
+  <symbol id="i-paintbrush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/>
+    <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.5 1 2 6.64.17 8.72-3.74a3.02 3.02 0 0 0-3.72-1.78z"/>
+  </symbol>
+  <symbol id="i-saw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+    <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+    <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+    <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+  </symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+    <polyline points="2 17 12 22 22 17"/>
+    <polyline points="2 12 12 17 22 12"/>
+  </symbol>
+  <symbol id="i-gate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="3" width="20" height="18" rx="1"/>
+    <line x1="7" y1="3" x2="7" y2="21"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="17" y1="3" x2="17" y2="21"/>
+    <line x1="2" y1="10" x2="22" y2="10"/><line x1="2" y1="15" x2="22" y2="15"/>
+  </symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C8 7.5 5 11 5 15a7 7 0 0 0 14 0c0-4-3-7.5-7-13z"/>
+  </symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    <polyline points="9 22 9 12 15 12 15 22"/>
+  </symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/>
+    <rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <!-- benefit icons -->
+  <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="20" height="14" x="2" y="7" rx="2"/>
+    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+  </symbol>
+  <symbol id="i-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+    <polyline points="16 7 22 7 22 13"/>
+  </symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  </symbol>
+  <symbol id="i-banknote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="20" height="12" x="2" y="6" rx="2"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M6 12h.01M18 12h.01"/>
+  </symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+  </symbol>
+  <!-- snowflake / AC -->
+  <symbol id="i-snowflake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/>
+    <path d="M20 4 4 20M4 4l16 16"/>
+    <path d="m16 4-4 4-4-4M16 20l-4-4-4 4M4 8l4 4-4 4M20 8l-4 4 4 4"/>
+  </symbol>
+  <!-- wifi / cableado -->
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/>
+  </symbol>
+  <!-- waves / piletas -->
+  <symbol id="i-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5s2.5 2 5 2 2.5-2 5-2 2.4.5 3 1"/>
+    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.4.5 3 1"/>
+    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.4.5 3 1"/>
+  </symbol>
+  <!-- leaf / jardín -->
+  <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+  </symbol>
+  <!-- hammer -->
+  <symbol id="i-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0v0a2.12 2.12 0 0 1 0-3L12 9"/>
+    <path d="M17.64 15 22 10.64"/>
+    <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/>
+  </symbol>
+</svg>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="Nexo Tandil Construcciones" />
+    <div class="nav-logo-text">
+      <span class="brand">Nexo</span>
+      <span class="sub">Tandil Construcciones</span>
+    </div>
+  </a>
+  <div class="nav-menu" id="navMenu">
+    <a href="index.html#servicios">Servicios</a>
+    <a href="index.html#nosotros">Nosotros</a>
+    <a href="index.html#garantia">Garantía</a>
+    <a href="index.html#auspiciantes">Auspiciantes</a>
+    <a href="index.html#contacto">Contacto</a>
+    <a href="postulaciones.html" class="nav-cta">Postulaciones</a>
+  </div>
+  <div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
+    <span id="t1"></span><span id="t2"></span><span id="t3"></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="section-label">Sumate al equipo</span>
+    <h1>Trabajá con<br/>Nexo Tandil</h1>
+    <p>Somos una empresa en crecimiento y siempre buscamos profesionales comprometidos, responsables y con ganas de crecer. Si sos bueno en lo tuyo, tenemos un lugar para vos.</p>
+  </div>
+</div>
+
+<!-- BENEFICIOS -->
+<section class="benefits-section">
+  <div class="benefits-inner">
+    <span class="section-label">Por qué trabajar con nosotros</span>
+    <h2 class="section-title">Más que un trabajo,<br/>una red de crecimiento</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="icon"><svg><use href="#i-briefcase"/></svg></span>
+        <h4>Trabajo constante</h4>
+        <p>Te conectamos con clientes de manera continua. Sin tener que buscar trabajo por tu cuenta.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon"><svg><use href="#i-trending"/></svg></span>
+        <h4>Crecimiento profesional</h4>
+        <p>Acceso a proyectos de distinta escala. Desde arreglos menores hasta obras de envergadura.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon"><svg><use href="#i-users"/></svg></span>
+        <h4>Respaldo institucional</h4>
+        <p>Trabajás bajo la marca Nexo Tandil, que garantiza credibilidad y confianza ante los clientes.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon"><svg><use href="#i-banknote"/></svg></span>
+        <h4>Pagos en tiempo y forma</h4>
+        <p>Nos comprometemos a liquidar tu trabajo de manera puntual y transparente.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon"><svg><use href="#i-tool"/></svg></span>
+        <h4>Herramientas y materiales</h4>
+        <p>Acceso a proveedores con descuentos exclusivos para el equipo Nexo Tandil.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon"><svg><use href="#i-pin"/></svg></span>
+        <h4>Trabajo en tu zona</h4>
+        <p>Priorizamos asignarte trabajos cerca de tu domicilio en Tandil y alrededores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES Y FORMULARIO -->
+<section class="postulaciones-section">
+  <div class="postulaciones-intro">
+    <span class="section-label">Rubros que buscamos</span>
+    <h2 class="section-title" style="color:var(--dark)">Puestos disponibles</h2>
+    <p class="section-sub">Estamos en búsqueda permanente de profesionales en las siguientes especialidades. Si tu rubro no está listado, postulate igual.</p>
+  </div>
+
+  <div class="roles-grid">
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-wrench"/></svg></span> Plomero</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-flame"/></svg></span> Gasista Matriculado</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-zap"/></svg></span> Electricista</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-building"/></svg></span> Albañil / Constructor</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-compass"/></svg></span> Arquitecto</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-paintbrush"/></svg></span> Pintor</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-saw"/></svg></span> Carpintero</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-layers"/></svg></span> Microalisador</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-gate"/></svg></span> Herrero</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-droplet"/></svg></span> Impermeabilizador</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-grid"/></svg></span> Colocador de Cerámicos</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-leaf"/></svg></span> Paisajista / Jardinero</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-snowflake"/></svg></span> Técnico Aire Acondicionado</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-wifi"/></svg></span> Cableado Estructurado</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-waves"/></svg></span> Piletas y Spa</div>
+    <div class="role-chip"><span class="role-icon"><svg><use href="#i-hammer"/></svg></span> Otro oficio</div>
+  </div>
+
+  <div class="apply-form-wrap">
+    <h2>Formulario de postulación</h2>
+    <p>Completá el formulario y nos pondremos en contacto a la brevedad para coordinar una entrevista o evaluación.</p>
+    <form class="apply-form" onsubmit="handleApplySubmit(event)">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="a-name">Nombre completo *</label>
+          <input type="text" id="a-name" placeholder="Tu nombre y apellido" required />
+        </div>
+        <div class="form-group">
+          <label for="a-dni">DNI</label>
+          <input type="text" id="a-dni" placeholder="Número de DNI" />
+        </div>
+        <div class="form-group">
+          <label for="a-phone">Teléfono / WhatsApp *</label>
+          <input type="tel" id="a-phone" placeholder="Tu número de contacto" required />
+        </div>
+        <div class="form-group">
+          <label for="a-email">Email</label>
+          <input type="email" id="a-email" placeholder="tu@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="a-specialty">Especialidad principal *</label>
+          <select id="a-specialty" required>
+            <option value="">Seleccioná tu rubro</option>
+            <option>Plomero</option><option>Gasista Matriculado</option><option>Electricista</option>
+            <option>Albañil / Constructor</option><option>Arquitecto</option><option>Pintor</option>
+            <option>Carpintero</option><option>Microalisador</option><option>Herrero</option>
+            <option>Impermeabilizador</option><option>Colocador de Cerámicos</option>
+            <option>Paisajista / Jardinero</option><option>Técnico Aire Acondicionado</option>
+            <option>Cableado Estructurado</option><option>Piletas y Spa</option><option>Otro oficio</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="a-experience">Años de experiencia</label>
+          <select id="a-experience">
+            <option value="">Seleccioná</option>
+            <option>Menos de 1 año</option><option>1 a 3 años</option>
+            <option>3 a 5 años</option><option>5 a 10 años</option><option>Más de 10 años</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="a-location">Barrio / Localidad</label>
+          <input type="text" id="a-location" placeholder="¿Dónde vivís?" />
+        </div>
+        <div class="form-group">
+          <label for="a-transport">Movilidad propia</label>
+          <select id="a-transport">
+            <option value="">Seleccioná</option>
+            <option>Sí, tengo vehículo</option><option>Solo moto</option><option>Sin movilidad propia</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="a-other">Otras especialidades o habilidades</label>
+          <input type="text" id="a-other" placeholder="Ej: También hago soldadura, coloco revestimientos..." />
+        </div>
+        <div class="form-group full">
+          <label for="a-matrix">Matrícula / Habilitación</label>
+          <input type="text" id="a-matrix" placeholder="Número de matrícula si correspondiere (gasistas, electricistas, arquitectos...)" />
+        </div>
+        <div class="form-group full">
+          <label for="a-refs">Referencias laborales</label>
+          <textarea id="a-refs" placeholder="Podés mencionar trabajos anteriores, empleadores, o personas que puedan dar referencia tuya..."></textarea>
+        </div>
+        <div class="form-group full">
+          <label for="a-about">Contanos sobre vos</label>
+          <textarea id="a-about" placeholder="¿Por qué querés trabajar con Nexo Tandil? ¿Qué diferencia a tu trabajo?"></textarea>
+        </div>
+        <div class="form-group full" style="display:flex;align-items:flex-start;gap:12px;flex-direction:row;">
+          <input type="checkbox" id="a-terms" required style="width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:var(--gold);" />
+          <label for="a-terms" style="font-size:0.88rem;color:var(--text-light);text-transform:none;letter-spacing:0;font-weight:400;">
+            Acepto que mis datos sean almacenados y utilizados por Nexo Tandil Construcciones para evaluar mi postulación y contactarme.
+          </label>
+        </div>
+        <div class="form-submit full">
+          <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;padding:18px;">Enviar postulación</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.jpg" alt="Nexo Tandil" />
+        <div>
+          <div class="brand">Nexo</div>
+          <div class="sub">Tandil Construcciones</div>
+        </div>
+      </div>
+      <p class="footer-desc">Servicios integrales de construcción y mantenimiento para el hogar y la empresa en Tandil y la zona serrana.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="index.html#servicios">Plomería</a></li>
+        <li><a href="index.html#servicios">Electricidad</a></li>
+        <li><a href="index.html#servicios">Construcción</a></li>
+        <li><a href="index.html#servicios">Arquitectura</a></li>
+        <li><a href="index.html#servicios">Pintura</a></li>
+        <li><a href="index.html#servicios">Microalisados</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#garantia">Garantía</a></li>
+        <li><a href="index.html#auspiciantes">Auspiciantes</a></li>
+        <li><a href="postulaciones.html">Trabajá con nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/5492494497723" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contacto@nexotandil.com">Email</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nexo Tandil Construcciones. Todos los derechos reservados.</p>
+    <p>Hecho con orgullo en Tandil, Buenos Aires</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<a href="https://wa.me/5492494497723" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
+  <span class="wa-tooltip">Escribinos</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  let menuOpen = false;
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+    document.getElementById('navMenu').classList.toggle('open', menuOpen);
+    const t1 = document.getElementById('t1'), t2 = document.getElementById('t2'), t3 = document.getElementById('t3');
+    if (menuOpen) { t1.style.transform='rotate(45deg) translate(5px,5px)'; t2.style.opacity='0'; t3.style.transform='rotate(-45deg) translate(5px,-5px)'; }
+    else { t1.style.transform=''; t2.style.opacity=''; t3.style.transform=''; }
+  }
+  document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => { if (menuOpen) toggleMenu(); }));
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 5000);
+  }
+
+  function handleApplySubmit(e) {
+    e.preventDefault();
+    showToast('Postulación enviada. Te contactamos pronto.');
+    e.target.reset();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.style.opacity='1'; entry.target.style.transform='translateY(0)'; }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.role-chip, .benefit-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(18px)';
+    el.style.transition = 'opacity 0.4s ease, transform 0.4s ease, border-color 0.3s ease, background 0.3s ease';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
