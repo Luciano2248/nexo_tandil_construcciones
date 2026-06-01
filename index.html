@@ -591,9 +591,7 @@
   function toggleMenu() {
     menuOpen = !menuOpen;
     document.getElementById('navMenu').classList.toggle('open', menuOpen);
-    const t1 = document.getElementById('t1'), t2 = document.getElementById('t2'), t3 = document.getElementById('t3');
-    if (menuOpen) { t1.style.transform='rotate(45deg) translate(5px,5px)'; t2.style.opacity='0'; t3.style.transform='rotate(-45deg) translate(5px,-5px)'; }
-    else { t1.style.transform=''; t2.style.opacity=''; t3.style.transform=''; }
+    document.getElementById('navToggle').classList.toggle('open', menuOpen);
   }
   document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => { if (menuOpen) toggleMenu(); }));
 

@@ -113,6 +113,9 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; }
 .nav-cta:hover { background: var(--gold-light) !important; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); transition: var(--transition); border-radius: 2px; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* === HERO === */
 .hero {
@@ -636,16 +639,18 @@ footer {
   .services-inner, .sponsors-inner { padding: 0 20px; }
   .about-inner, .warranty-inner, .contact-inner { padding: 0 20px; gap: 40px; }
   .form-grid { grid-template-columns: 1fr; }
+  .apply-form .form-grid { grid-template-columns: 1fr; }
   footer { padding: 40px 20px; }
   .footer-inner { grid-template-columns: 1fr; gap: 30px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .warranty-badges { flex-direction: column; }
   .benefits-grid { grid-template-columns: 1fr; }
-  .apply-form-wrap { padding: 30px 24px; }
+  .apply-form-wrap { padding: 30px 20px; }
   .postulaciones-section { padding: 50px 20px; }
   .benefits-section { padding: 50px 20px; }
-  .contact-form { padding: 36px 28px; }
-  .sponsor-join { padding: 40px 30px; }
+  .page-hero { padding: 110px 20px 50px; }
+  .contact-form { padding: 30px 20px; }
+  .sponsor-join { padding: 40px 20px; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 2.2rem; }
