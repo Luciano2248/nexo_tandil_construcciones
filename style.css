@@ -21,8 +21,8 @@
 
 /* === RESET === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 ul { list-style: none; }
@@ -421,6 +421,7 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; }
 .form-group input,
 .form-group textarea,
 .form-group select {
+  width: 100%;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius);
@@ -629,10 +630,9 @@ footer {
 }
 @media (max-width: 768px) {
   .navbar { padding: 0 20px; }
-  .nav-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(20,20,17,0.98); flex-direction: column; justify-content: center; gap: 32px; z-index: 999; }
+  .nav-menu { display: none; }
   .nav-menu.open { display: flex; }
-  .nav-menu a { font-size: 1.1rem; }
-  .nav-toggle { display: flex; z-index: 1000; }
+  .nav-toggle { display: flex; }
   .hero-content { padding: 0 20px; padding-top: 80px; }
   .hero-stats { gap: 30px; flex-wrap: wrap; }
   .hero-scroll { display: none; }
@@ -651,10 +651,14 @@ footer {
   .page-hero { padding: 110px 20px 50px; }
   .contact-form { padding: 30px 20px; }
   .sponsor-join { padding: 40px 20px; }
+  .roles-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 2.2rem; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .services-grid { grid-template-columns: 1fr; }
-  .roles-grid { grid-template-columns: 1fr 1fr; }
+  .roles-grid { grid-template-columns: 1fr; }
+  .apply-form-wrap { padding: 24px 16px; }
+  .section-title { font-size: 1.8rem; }
+  .page-hero h1 { font-size: 2rem; }
 }

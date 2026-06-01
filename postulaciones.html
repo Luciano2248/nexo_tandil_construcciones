@@ -5,7 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Postulaciones — Nexo Tandil Construcciones</title>
   <meta name="description" content="Unite al equipo de Nexo Tandil Construcciones. Buscamos plomeros, electricistas, gasistas, pintores, carpinteros y más.">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=5" />
+  <style>
+    @media (max-width: 768px) {
+      #navMenu {
+        display: none;
+        position: fixed !important;
+        top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+        width: 100% !important; height: 100% !important;
+        background: #111110 !important;
+        z-index: 9999 !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0 !important;
+        padding: 80px 0 40px !important;
+        overflow-y: auto; overflow-x: hidden;
+      }
+      #navMenu.open { display: flex !important; }
+      #navMenu a {
+        font-size: 1.1rem !important; font-weight: 500 !important;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        color: rgba(255,255,255,0.75) !important;
+        width: 100% !important; text-align: center !important;
+        padding: 18px 40px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        display: block !important;
+      }
+      #navMenu a:first-child { border-top: 1px solid rgba(255,255,255,0.08) !important; }
+      #navMenu a:hover, #navMenu a:active { color: #fff !important; background: rgba(255,255,255,0.05) !important; }
+      #navMenu a::after { display: none !important; }
+      #navMenu .nav-cta {
+        display: inline-flex !important; background: #b8975a !important;
+        color: #fff !important; border-radius: 4px !important;
+        padding: 14px 36px !important; margin-top: 28px !important;
+        border: none !important; width: auto !important;
+      }
+      #navToggle { z-index: 10000 !important; position: relative !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -128,18 +166,18 @@
       <span class="sub">Tandil Construcciones</span>
     </div>
   </a>
-  <div class="nav-menu" id="navMenu">
-    <a href="index.html#servicios">Servicios</a>
-    <a href="index.html#nosotros">Nosotros</a>
-    <a href="index.html#garantia">Garantía</a>
-    <a href="index.html#auspiciantes">Auspiciantes</a>
-    <a href="index.html#contacto">Contacto</a>
-    <a href="postulaciones.html" class="nav-cta">Postulaciones</a>
-  </div>
   <div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
     <span id="t1"></span><span id="t2"></span><span id="t3"></span>
   </div>
 </nav>
+<div class="nav-menu" id="navMenu">
+  <a href="index.html#servicios">Servicios</a>
+  <a href="index.html#nosotros">Nosotros</a>
+  <a href="index.html#garantia">Garantía</a>
+  <a href="index.html#auspiciantes">Auspiciantes</a>
+  <a href="index.html#contacto">Contacto</a>
+  <a href="postulaciones.html" class="nav-cta">Postulaciones</a>
+</div>
 
 <!-- HERO -->
 <div class="page-hero">
@@ -368,6 +406,7 @@
     menuOpen = !menuOpen;
     document.getElementById('navMenu').classList.toggle('open', menuOpen);
     document.getElementById('navToggle').classList.toggle('open', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
   }
   document.querySelectorAll('.nav-menu a').forEach(a => a.addEventListener('click', () => { if (menuOpen) toggleMenu(); }));
 
