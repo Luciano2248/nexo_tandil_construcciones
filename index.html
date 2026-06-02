@@ -213,7 +213,7 @@
         <div class="stat-label">Especialidades</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">3<span>m</span></div>
+        <div class="stat-num">6<span>m</span></div>
         <div class="stat-label">Meses de garantía</div>
       </div>
       <div class="stat-item">
@@ -344,7 +344,7 @@
           <div class="feature-icon"><svg><use href="#i-shield"/></svg></div>
           <div class="feature-text">
             <h4>Garantía en todos los trabajos</h4>
-            <p>Respaldamos cada trabajo con una garantía mínima de 3 meses. Tu tranquilidad es nuestra prioridad.</p>
+            <p>Respaldamos cada trabajo con una garantía mínima de 6 meses. Tu tranquilidad es nuestra prioridad.</p>
           </div>
         </div>
         <div class="about-feature">
@@ -407,7 +407,7 @@
     <div class="warranty-content">
       <span class="section-label">Nuestro compromiso</span>
       <h2 class="section-title">Garantía que te da<br/>tranquilidad real</h2>
-      <p class="section-sub">Todos los trabajos realizados por Nexo Tandil Construcciones cuentan con una garantía mínima de <strong style="color:var(--gold-light)">3 meses</strong>. Si algo no funciona como debería, volvemos sin costo adicional.</p>
+      <p class="section-sub">Todos los trabajos realizados por Nexo Tandil Construcciones cuentan con una garantía mínima de <strong style="color:var(--gold-light)">6 meses</strong>. Si algo no funciona como debería, volvemos sin costo adicional.</p>
       <div class="warranty-badges">
         <div class="warranty-badge">
           <span class="badge-icon"><svg><use href="#i-doc-check"/></svg></span>
@@ -424,12 +424,12 @@
       </div>
     </div>
     <div class="warranty-card">
-      <div class="warranty-num">3</div>
+      <div class="warranty-num">6</div>
       <div class="warranty-label">Meses de garantía incluidos</div>
       <div class="warranty-divider"></div>
       <div class="warranty-extend">
         <p>¿Querés mayor cobertura? Extendé tu garantía con un único pago.</p>
-        <div class="warranty-price"><span>$</span>9.500</div>
+        <div class="warranty-price"><span>$</span>14.500</div>
         <p style="margin-top:8px; font-size:0.8rem;">Extensión de garantía adicional</p>
         <a href="#contacto" class="btn">Contratar extensión</a>
       </div>
@@ -643,7 +643,14 @@
 
   function handleContactSubmit(e) {
     e.preventDefault();
-    showToast('Consulta enviada. Te contactamos pronto.');
+    const name    = document.getElementById('c-name').value;
+    const phone   = document.getElementById('c-phone').value;
+    const email   = document.getElementById('c-email').value;
+    const service = document.getElementById('c-service').value;
+    const msg     = document.getElementById('c-msg').value;
+    const text = `*Nueva consulta desde el sitio web*\n\n*Nombre:* ${name}\n*Teléfono:* ${phone || '-'}\n*Email:* ${email || '-'}\n*Servicio:* ${service || 'No especificado'}\n\n*Mensaje:*\n${msg}`;
+    window.open('https://wa.me/5492494497723?text=' + encodeURIComponent(text), '_blank');
+    showToast('Redirigiendo a WhatsApp...');
     e.target.reset();
   }
 

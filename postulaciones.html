@@ -419,7 +419,24 @@
 
   function handleApplySubmit(e) {
     e.preventDefault();
-    showToast('Postulación enviada. Te contactamos pronto.');
+    const name       = document.getElementById('a-name').value;
+    const dni        = document.getElementById('a-dni').value;
+    const phone      = document.getElementById('a-phone').value;
+    const email      = document.getElementById('a-email').value;
+    const specialty  = document.getElementById('a-specialty').value;
+    const experience = document.getElementById('a-experience').value;
+    const location   = document.getElementById('a-location').value;
+    const transport  = document.getElementById('a-transport').value;
+    const other      = document.getElementById('a-other').value;
+    const matrix     = document.getElementById('a-matrix').value;
+    const refs       = document.getElementById('a-refs').value;
+    const about      = document.getElementById('a-about').value;
+    const subject = encodeURIComponent(`Postulación - ${specialty} - ${name}`);
+    const body = encodeURIComponent(
+      `Nombre: ${name}\nDNI: ${dni}\nTeléfono: ${phone}\nEmail: ${email}\n\nEspecialidad: ${specialty}\nExperiencia: ${experience}\nBarrio/Localidad: ${location}\nMovilidad: ${transport}\n\nOtras especialidades: ${other}\nMatrícula: ${matrix}\n\nReferencias:\n${refs}\n\nSobre el postulante:\n${about}`
+    );
+    window.location.href = `mailto:adriangrosman391@gmail.com?subject=${subject}&body=${body}`;
+    showToast('Abriendo cliente de correo...');
     e.target.reset();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
