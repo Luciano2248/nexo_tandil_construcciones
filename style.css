@@ -99,7 +99,7 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; }
 }
 .navbar.scrolled { height: 68px; background: #e8e6e2; }
 .nav-logo { display: flex; align-items: center; gap: 14px; }
-.nav-logo img { height: 76px; width: auto; object-fit: contain; background: transparent; }
+.nav-logo img { height: 95px; width: auto; object-fit: contain; background: transparent; }
 .nav-logo-text { display: flex; flex-direction: column; }
 .nav-logo-text .brand { font-size: 1.1rem; font-weight: 800; letter-spacing: 0.12em; color: var(--dark); text-transform: uppercase; line-height: 1; }
 .nav-logo-text .sub { font-size: 0.6rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-top: 3px; }
